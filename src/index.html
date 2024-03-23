@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Quién asesinó al jardinero?</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div id="general">
+      <div id="centrar">
+        <h1>
+          El Jardinero de la mansión fue asesinado. <br />
+          ¿Puedes descubrir quién lo hizo?
+        </h1>
+      </div>
+      <div id="imagen"><img src="src/assets/img/asesino.jpg" /></div>
+      <div class="descQuien">
+        <div>
+          <button onclick="refreshPage()">Descubrir</button>
+          <script>
+            function refreshPage() {
+              location.reload();
+            }
+          </script>
+        </div>
+        <div><p id="excuse">My dog eat my homework</p></div>
+      </div>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
