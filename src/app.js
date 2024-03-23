@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -8,64 +7,59 @@ import "./assets/img/4geeks.ico";
 window.onload = function displayText() {
   //write your code here
 
-  let who = [
-    "El chef",
-    "El cocinero",
-    "El periodista",
-    "La doctora",
-    "La enfermera",
-    "El abogado",
-    "El detective"
+  let programadores = [
+    {
+      id: 1,
+      name: "Robert Tovar",
+      email: "roberttovarv@gmail.com",
+      imageUrl: "https://avatars.githubusercontent.com/u/155775143?v=4",
+      website: "https://github.com/Roberttovarv/roberttovarv"
+    },
+    {
+      id: 2,
+      name: "Hector Chocobar",
+      email: "hector@chocobar.net",
+      imageUrl: "https://avatars.githubusercontent.com/u/45291267?v=4",
+      website: "https://github.com/hchocobar"
+    },
+    {
+      id: 3,
+      name: "Matias Kamelman",
+      email: "kamelmat@gmail.com",
+      imageUrl: "https://avatars.githubusercontent.com/u/125071787?v=4",
+      website: "https://github.com/kamelmat"
+    },
+    {
+      id: 4,
+      name: "Mar Aguayo",
+      email: "mar.aguayo15@gmail.com",
+      imageUrl: "https://avatars.githubusercontent.com/u/154342626?v=4",
+      website: "https://github.com/magufl"
+    },
+    {
+      id: 5,
+      name: "Marco Luque",
+      email: "marcoluqueh@gmail.com",
+      imageUrl: "https://avatars.githubusercontent.com/u/101642586?v=4",
+      website: "https://github.com/marcoluqueh"
+    }
   ];
-  let action = [
-    "mató",
-    "asesinó",
-    "apuñaló",
-    "cortó",
-    "desmembró",
-    "descuartizó"
-  ];
-  let what = [
-    "la navaja",
-    "la pala de jardín",
-    "el candelabro",
-    "el picahielos",
-    "el martillo",
-    "el detornillador"
-  ];
-  let when = [
-    "durante la cena.",
-    "en la cocina.",
-    "en el salón.",
-    "durante el brindis.",
-    "en el jardín."
-  ];
+  let randomProg =
+    programadores[Math.floor(Math.random() * programadores.length)];
 
-  let selectedWho = who[Math.floor(Math.random() * who.length)];
-  let selectedWhen = when[Math.floor(Math.random() * when.length)];
-  let selectedAction = action[Math.floor(Math.random() * action.length)];
-  let selectedWhat = what[Math.floor(Math.random() * what.length)];
+  let cardHTML = programadores.map((item, id) => {
+    cardHTML += `
+    <div key=${id} class="card" style="width: 18rem;">
+      <img src=${item.imageUrl} class="card-img-top" alt=${item.name}>
+      <div class="card-body">
+        <h5 class="card-title">${item.name}</h5>
+        <p class="card-text">${item.company.name}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  `;
+  });
 
-  document.getElementById("excuse").innerHTML =
-    selectedWho +
-    " " +
-    selectedAction +
-    " " +
-    "a la víctima con" +
-    " " +
-    selectedWhat +
-    " " +
-    selectedWhen;
-
-  console.log(
-    selectedWho +
-      " " +
-      selectedAction +
-      " " +
-      "a la víctima con" +
-      " " +
-      selectedWhat +
-      " " +
-      selectedWhen
-  );
+  const cardProgramadores = document.querySelector("#excuse");
+  cardProgramadores.innerHTML = cardHTML;
 };
