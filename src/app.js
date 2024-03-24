@@ -61,4 +61,23 @@ window.onload = function displayText() {
 
   const cardProgramadores = document.querySelector("#excuse");
   cardProgramadores.innerHTML = cardHTML;
+
+  // let cardAll = programadores
+  //   .map(
+  //     (item, id) => `
+  //   <div key="${id}" class="card" style="width: 18rem;">
+  //     <img src="${item.imageUrl}" class="card-img-top" alt="${item.name}">
+  //     <div class="card-body">
+  //       <h5 class="card-title">${item.name}</h5>
+  //       <p class="card-text">${item.email}</p>
+  //       <p class="card-text">${item.website}</p>
+  //       <a href="#" class="btn btn-primary">Go somewhere</a>
+  //     </div>
+  //   </div>
+  // `
+  //   )
+  //   .join("");
+
+  // const cardEveryone = document.querySelector("#todosProg");
+  // cardEveryone.innerHTML = cardAll;
 };
