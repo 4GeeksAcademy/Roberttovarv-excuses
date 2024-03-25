@@ -48,12 +48,12 @@ window.onload = function displayText() {
     programadores[Math.floor(Math.random() * programadores.length)];
 
   let cardHTML = `
-    <div class="card" style="width: 18rem;">
+    <div class="card pt-1" style="width: 18rem;">
       <img src="${randomProg.imageUrl}" class="card-img-top" alt="${randomProg.name}">
       <div class="card-body">
         <h5 class="card-title">${randomProg.name}</h5>
         <p class="card-text">${randomProg.email}</p>
-        <p class="card-text"><a href="${randomProg.website} target="_blank">Sitio Web</a></p>
+        <p class="card-text"><a href="${randomProg.website}" target="_blank">Sitio Web</a></p>
         <a href="#" class="btn btn-primary m-2" onclick="window.location.reload();">Conocer a otro</a><a href="src/programadores.html" class="btn btn-primary">Ver todos</a>
       </div>
     </div>
@@ -62,7 +62,8 @@ window.onload = function displayText() {
   const cardProgramadores = document.querySelector("#excuse");
   cardProgramadores.innerHTML = cardHTML;
 
-  // let cardAll = programadores
+  // let cardAll = "";
+  // programadores
   //   .map(
   //     (item, id) => `
   //   <div key="${id}" class="card" style="width: 18rem;">
