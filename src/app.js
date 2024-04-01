@@ -1,12 +1,9 @@
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function displayText() {
-  //write your code here
-
   let programadores = [
     {
       id: 1,
